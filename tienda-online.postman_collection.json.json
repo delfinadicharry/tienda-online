@@ -1,0 +1,243 @@
+{
+  "info": {
+    "_postman_id": "b7f0119f-e81e-40b6-8ccd-26a8926035ae",
+    "name": "Tienda online Copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58697402",
+    "_collection_link": "https://go.postman.co/collection/58697402-b7f0119f-e81e-40b6-8ccd-26a8926035ae?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "Crear un producto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fields\": {\r\n    \"nombre\": {\r\n      \"stringValue\": \"Webcam\"\r\n    },\r\n    \"categoria\": {\r\n      \"stringValue\": \"Accesorios\"\r\n    },\r\n    \"precio\": {\r\n      \"integerValue\": \"45000\"\r\n    },\r\n    \"stock\": {\r\n      \"integerValue\": \"6\"\r\n    }\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/productos?documentId=9",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productos"
+              ],
+              "query": [
+                {
+                  "key": "documentId",
+                  "value": "9"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/productos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener un producto determinado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/productos/9",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productos",
+                "9"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modificar nombre, precio o stock",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fields\": {\r\n    \"nombre\": {\r\n      \"stringValue\": \"Parlante Bluetooth\"\r\n    },\r\n    \"categoria\": {\r\n      \"stringValue\": \"Audio\"\r\n    },\r\n    \"precio\": {\r\n      \"integerValue\": \"60000\"\r\n    },\r\n    \"stock\": {\r\n      \"integerValue\": \"10\"\r\n    }\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/productos/2?updateMask.fieldPaths=nombre&updateMask.fieldPaths=categoria&updateMask.fieldPaths=precio&updateMask.fieldPaths=stock",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productos",
+                "2"
+              ],
+              "query": [
+                {
+                  "key": "updateMask.fieldPaths",
+                  "value": "nombre"
+                },
+                {
+                  "key": "updateMask.fieldPaths",
+                  "value": "categoria"
+                },
+                {
+                  "key": "updateMask.fieldPaths",
+                  "value": "precio"
+                },
+                {
+                  "key": "updateMask.fieldPaths",
+                  "value": "stock"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar un producto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/productos/5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "productos",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "Crear un cliente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fields\": {\r\n    \"nombre\": {\r\n      \"stringValue\": \"Carlos\"\r\n    },\r\n    \"apellido\": {\r\n      \"stringValue\": \"Fernández\"\r\n    },\r\n    \"email\": {\r\n      \"stringValue\": \"carlosfernandez@gmail.com\"\r\n    },\r\n    \"direccion\": {\r\n      \"stringValue\": \"Mitre 250\"\r\n    }\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/clientes?documentId=5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "clientes"
+              ],
+              "query": [
+                {
+                  "key": "documentId",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener todos los clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/clientes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "clientes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "Crear un nuevo pedido",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fields\": {\r\n    \"cliente_id\": {\r\n      \"integerValue\": \"5\"\r\n    },\r\n    \"productos\": {\r\n      \"arrayValue\": {\r\n        \"values\": [\r\n          {\r\n            \"mapValue\": {\r\n              \"fields\": {\r\n                \"producto_id\": {\r\n                  \"integerValue\": \"2\"\r\n                },\r\n                \"cantidad\": {\r\n                  \"integerValue\": \"1\"\r\n                }\r\n              }\r\n            }\r\n          },\r\n          {\r\n            \"mapValue\": {\r\n              \"fields\": {\r\n                \"producto_id\": {\r\n                  \"integerValue\": \"4\"\r\n                },\r\n                \"cantidad\": {\r\n                  \"integerValue\": \"1\"\r\n                }\r\n              }\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"total\": {\r\n      \"integerValue\": \"70000\"\r\n    }\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/pedidos?documentId=5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "pedidos"
+              ],
+              "query": [
+                {
+                  "key": "documentId",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://firestore.googleapis.com/v1/projects/tienda-online-11d3d/databases/(default)/documents"
+    }
+  ]
+}
