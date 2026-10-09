@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "cliente_id": 3,
+        "productos": [
+            {
+            "producto_id": 3,     
+            "cantidad": 1
+            },
+            {
+                "producto_id": 2,
+                "cantidad": 2
+            }
+        ],
+        "total": 115000
+    },
+    {
+        "id": 2,
+        "cliente_id": 1,
+        "productos": [
+            {
+                "producto_id": 1,
+                "cantidad": 2
+            },
+            {
+                "producto_id": 4,
+                "cantidad": 1
+            }
+        ],
+        "total": 70000
+    },
+    {
+        "id": 3,
+        "cliente_id": 4,
+        "productos": [
+            {
+                "producto_id": 7,
+                "cantidad": 3
+            },
+            {
+                "producto_id": 8,
+                "cantidad": 1
+            }
+        ],
+        "total": 87000
+    },
+    {
+        "id": 4,
+        "cliente_id": 2,
+        "productos": [
+            {
+                "producto_id": 5,
+                "cantidad": 1
+            }
+        ],
+        "total": 800000
+    }
+]

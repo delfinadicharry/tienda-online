@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "email": "juanperez@gmail.com",
+        "direccion": "Belgrano 123"
+    },
+    {
+        "id": 2,
+        "nombre": "María",
+        "apellido": "Gómez",
+        "email": "mariagomez@gmail.com",
+        "direccion": "Rivadavia 456"
+    },
+    {
+        "id": 3,
+        "nombre": "Pedro",
+        "apellido": "López",
+        "email": "pedrolopez@gmail.com",
+        "direccion": "Sarmiento 789"
+    },
+    {
+        "id": 4,
+        "nombre": "Ana",
+        "apellido": "Martínez",
+        "email": "anamartinez@gmail.com",
+        "direccion": "Corrientes 101"
+    }
+]
